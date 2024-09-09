@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hexagon E-commerce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header com links de navegação -->
+    <header>
+        <div class="logo">Hexagon</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#hexagon">A Hexagon</a></li>
+                <li><a href="#rede">Rede de Distribuição</a></li>
+                <li><a href="#novidades">Novidades</a></li>
+                <li><a href="#contato">Fale Conosco</a></li>
+            </ul>
+        </nav>
+        <div class="user-area">
+            <span>Seja bem-vindo, Sidney</span>
+            <a href="#" aria-label="Logout">Logout</a>
+        </div>
+    </header>
+
+    <!-- Área de busca e filtro -->
+    <section class="search">
+        <input type="text" placeholder="Buscar produtos..." aria-label="Busca de produtos">
+        <button type="button">Buscar</button>
+        <select aria-label="Filtrar por categoria">
+            <option value="all">Todas as categorias</option>
+            <option value="eletronicos">Eletrônicos</option>
+            <option value="ferramentas">Ferramentas</option>
+        </select>
+    </section>
+
+    <!-- Destaques de produtos -->
+    <section class="produtos-destaque">
+        <h2>Ofertas em destaque</h2>
+        <div class="produto">
+            <img src="img/produto1.jpg" alt="Produto 1">
+            <h3>Produto 1</h3>
+            <p>Por: R$ 1.000,00</p>
+        </div>
+        <div class="produto">
+            <img src="img/produto2.jpg" alt="Produto 2">
+            <h3>Produto 2</h3>
+            <p>Por: R$ 1.500,00</p>
+        </div>
+        <div class="produto">
+            <img src="img/produto3.jpg" alt="Produto 3">
+            <h3>Produto 3</h3>
+            <p>Por: R$ 2.000,00</p>
+        </div>
+    </section>
+
+    <!-- Formulário de contato -->
+    <section id="contato" class="contato">
+        <h2>Fale Conosco</h2>
+        <form id="contact-form">
+            <input type="text" name="nome" id="nome" placeholder="Seu nome" required aria-label="Nome">
+            <input type="email" name="email" id="email" placeholder="Seu email" required aria-label="Email">
+            <textarea name="mensagem" id="mensagem" placeholder="Sua mensagem" aria-label="Mensagem"></textarea>
+            <button type="submit">Enviar</button>
+            <p id="form-message" role="alert"></p> <!-- Mensagem de feedback -->
+        </form>
+    </section>
+
+    <footer>
+        <p>Hexagon 2024 - Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
