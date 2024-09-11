@@ -30,8 +30,8 @@ header .logo {
 nav ul {
     list-style: none;
     display: flex;
+    flex-direction: row;
     gap: 15px;
-    flex-wrap: wrap;
 }
 
 nav ul li a {
@@ -45,7 +45,7 @@ nav ul li a {
     align-items: center;
 }
 
-/* Estilo do botão de menu */
+/* Estilo do botão de menu (hambúrguer) */
 #burguer {
     background-color: black;
     color: white;
@@ -164,7 +164,6 @@ footer {
         margin: 10px 0;
     }
 
-    /* Centraliza o texto da área do usuário em telas pequenas */
     .user-area {
         display: flex;
         flex-direction: column;
@@ -172,7 +171,6 @@ footer {
         width: 100%;
     }
 
-    /* Exibe o botão de menu e ajusta sua posição */
     #burguer {
         display: block;
         position: absolute;
