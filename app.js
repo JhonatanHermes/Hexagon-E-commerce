@@ -3,35 +3,27 @@ document.addEventListener('DOMContentLoaded', function() {
     const submitButton = form.querySelector('button[type="submit"]');
     const itens = document.querySelector('nav ul');
     const burguer = document.getElementById('burguer');
+    const formMessage = document.getElementById('form-message');
+
+    // Função para alternar o menu em telas menores
+    function toggleMenu() {
+        itens.classList.toggle('visible');
+    }
+
+    // Adiciona o evento de clique no botão de menu
+    burguer.addEventListener('click', toggleMenu);
 
     // Função para enviar o formulário
     form.addEventListener('submit', function(event) {
         event.preventDefault();
+        submitButton.disabled = true;  // Desativa o botão para evitar múltiplos envios
+        formMessage.textContent = 'Enviando...';
 
-        submitButton.disabled = true;
-        submitButton.textContent = 'Enviando...';
-
-        const nome = form.querySelector('input[name="nome"]').value.trim();
-        const email = form.querySelector('input[name="email"]').value.trim();
-        const mensagem = form.querySelector('textarea[name="mensagem"]').value.trim();
-
-        if (!nome || !email || !mensagem) {
-            alert('Por favor, preencha todos os campos.');
-            submitButton.disabled = false;
-            submitButton.textContent = 'Enviar';
-            return;
-        }
-
-        setTimeout(function() {
-            alert('Mensagem enviada com sucesso!');
+        // Simulação de envio (você pode substituir isso por uma requisição real)
+        setTimeout(() => {
+            formMessage.textContent = 'Mensagem enviada com sucesso!';
             form.reset();
             submitButton.disabled = false;
-            submitButton.textContent = 'Enviar';
-        }, 1000);
+        }, 2000);
     });
-
-    // Função para alternar o menu em telas menores
-    window.toggleMenu = function() {
-        itens.classList.toggle('visible');
-    };
 });
