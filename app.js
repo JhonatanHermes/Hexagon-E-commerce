@@ -57,3 +57,4 @@ document.addEventListener('DOMContentLoaded', function() {
     mudouTamanho(); // Inicializa o estado correto do menu
 });
 
+
