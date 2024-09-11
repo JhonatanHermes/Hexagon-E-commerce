@@ -20,6 +20,7 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    position: relative;
 }
 
 header .logo {
@@ -44,6 +45,22 @@ nav ul li a {
     align-items: center;
 }
 
+/* Estilo do botão de menu */
+#burguer {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    display: none; /* Inicialmente escondido */
+    text-align: center;
+}
+
+#burguer:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Seção de busca */
 .search {
     padding: 20px;
     display: flex;
@@ -64,6 +81,7 @@ nav ul li a {
     cursor: pointer;
 }
 
+/* Produtos em destaque */
 .produtos-destaque {
     padding: 20px;
     background-color: #fff;
@@ -101,6 +119,7 @@ nav ul li a {
     color: #333;
 }
 
+/* Seção de contato */
 .contato {
     background-color: #eee;
     padding: 20px;
@@ -115,6 +134,7 @@ nav ul li a {
     margin: 0 auto;
 }
 
+/* Rodapé */
 footer {
     background-color: #333;
     color: white;
@@ -124,7 +144,6 @@ footer {
 }
 
 /* Media Queries para Responsividade */
-
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
@@ -143,6 +162,22 @@ footer {
     .produto {
         flex: 1 1 100%;
         margin: 10px 0;
+    }
+
+    /* Centraliza o texto da área do usuário em telas pequenas */
+    .user-area {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Exibe o botão de menu e ajusta sua posição */
+    #burguer {
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 15px;
     }
 }
 
