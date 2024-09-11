@@ -143,11 +143,38 @@ footer {
     margin-top: 20px;
 }
 
+/* Menu escondido em telas menores */
+nav ul {
+    display: none;
+}
+
+nav ul.visible {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #333;
+    padding: 10px;
+    width: 100%;
+}
+
+@media (min-width: 769px) {
+    #burguer {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
 /* Media Queries para Responsividade */
 @media (max-width: 768px) {
     nav ul {
+        display: none;
         flex-direction: column;
         align-items: center;
+        width: 100%;
     }
 
     .search {
