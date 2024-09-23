@@ -27,6 +27,11 @@ header .logo {
     font-size: 1.5em;
 }
 
+.logo a {
+    text-decoration: none;
+    color: white;
+}
+
 nav ul {
     list-style: none;
     display: flex;
@@ -118,6 +123,15 @@ nav ul li a {
     font-size: 1.2em;
     color: #333;
 }
+
+.carrinho {
+    padding-left: 20px;
+    text-align: left;
+}
+
+.carrinho div {
+    text-align: right;
+} 
 
 /* Seção de contato */
 .contato {
